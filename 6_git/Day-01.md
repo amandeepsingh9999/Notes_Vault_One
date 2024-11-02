@@ -1,104 +1,108 @@
-Step - 1 
--- 
-Setup Username and email for the git
+### Step 1: Set Up Git Username and Email
 
-##### For setting up User name
-```sh
-git config --global user.name "amandeepsingh9999"
-```
-##### For Setting up email in global config
-```sh
-git config --global user.email amandeepsinghbhogal002@gmail.com
-```
+To commit changes, Git requires a username and email address.
 
-`System` - All user
-`Global` - All repositories of current user
-`Local` - The Current Repository 
+1. **Set Username**:
+   ```sh
+   git config --global user.name "username1234"
+   ```
 
-##### For Setting up default code editor for git
+2. **Set Email**:
+   ```sh
+   git config --global user.email "emailid1234@gmail.com"
+   ```
 
-```sh
-git config --global core.editor "nvim"
-```
+> **Levels of Configuration**:
+> - `System`: Applies to all users on the system.
+> - `Global`: Applies to all repositories of the current user.
+> - `Local`: Applies only to the current repository.
 
-##### For Seeing the settings we made earlier in the code
+3. **Set Default Code Editor for Git**:
+   ```sh
+   git config --global core.editor "nvim"
+   ```
 
-```sh
-git config --global -e
-```
+4. **View Configurations**:
+   ```sh
+   git config --global -e
+   ```
 
-##### This is a Git setting that controls how line endings are handled in the repository.
+### Handling Line Endings
+
+Git can automatically convert line endings for different OS environments. To set this up:
 
 ```sh
 git config --global core.autocrlf input
 ```
 
-**`input`**: This specific value for `core.autocrlf` tells Git to:
+- **`input`**: Converts `CRLF` to `LF` on commit, which is helpful for macOS/Linux users who want consistent `LF` line endings in the repository. Files remain in `LF` format when checked out.
 
-- **Convert CRLF to LF** when files are committed to the repository. This is useful for macOS/Linux users who don't want Windows-style line endings (`CRLF`) in the repository.
-- **Leave line endings as-is** when files are checked out, meaning that if you're on macOS/Linux, files stay in the `LF` format when you open them.
+---
 
-## Now we will Take example to push a repo in github
+### Example: Pushing a Repository to GitHub
 
-1. Initializing a repo
-```sh
-git init
-```
+1. **Initialize the Repository**:
+   ```sh
+   git init
+   ```
 
-2. Check the status of a repo
-```sh
-git status
-```
+2. **Check the Status**:
+   ```sh
+   git status
+   ```
 
-3. Staging the changes 
+3. **Stage Changes**:
+   - **Add All Files**:
+     ```sh
+     git add .
+     ```
+   - **Add Specific Files**:
+     ```sh
+     git add file1.txt
+     ```
 
-for adding all file to the stage
-```sh
-git add .
-```
+4. **Commit the Changes**:
+   ```sh
+   git commit -m "This action is added"
+   ```
 
-for adding selected files for staging
-```sh
-git add file1.txt
-```
+5. **Directly Commit All Changes**:
+   ```sh
+   git commit -am "The bug is fixed!!"
+   ```
+   > The `-a` flag stages and commits all updated files in one step.
 
-4. Commiting the changes
-```sh
-git commit -m "This action is added"
-```
+---
 
-5. Directly commiting code
-```sh
-git commit -am "The bug is fixed !!"
-# We give -a flag for all files that are updated !!
-```
+### Removing Files from a Git Repository
 
+If a file is removed from the directory but still appears in Git, you can untrack it.
 
-### Removing files from a git repo
+1. **Remove the File from Git**:
+   ```sh
+   rm file1.txt
+   ```
 
-suppose we removed a file from git repo 
-```sh
-rm file1.txt
-```
+2. **List Tracked Files**:
+   ```sh
+   git ls-files
+   ```
 
-now we can see still see the file1.txt in the stage 
-the command which will show staged file is 
-```sh
-git ls-files
-```
+3. **View Repository Status**:
+   ```sh
+   git status
+   ```
 
-Now we will see the status of our git repo 
-```sh
-git status
-```
+4. **Remove and Untrack File in One Step**:
+   ```sh
+   git rm file1.txt
+   ```
 
-Another way to do it
-```sh
-git rm file1.txt
-```
+---
 
-for future - 
-1. browsing history
-2. branching and merging 
-3. collaboration
-4. rewriting history
+### Future Topics
+
+1. **Browsing History**
+2. **Branching and Merging**
+3. **Collaboration with Others**
+4. **Rewriting History**

@@ -1,78 +1,91 @@
-# Renaming file in git repo
+### Renaming a File in a Git Repository
 
-Step - 01 
-```sh
-mv old_file_name new_file
-```
+Renaming files in Git is straightforward. Here’s how:
 
-Step - 02
-```sh
-git add new_file
-```
+#### Step-by-Step Method
 
-Step - 03
-```sh
-git rm old_file_name
-```
+1. **Rename the file**:
+   ```sh
+   mv old_file_name new_file_name
+   ```
 
-Step - 04
-```sh
-git commit -m "Rename file from old_file_name to new_file"
-```
+2. **Stage the new file**:
+   ```sh
+   git add new_file_name
+   ```
 
-Automatic way to do it
-```sh
-git mv old_file_name new_file
-git commit -m "Rename file from old_file_name to new_file"
-```
+3. **Remove the old file from tracking**:
+   ```sh
+   git rm old_file_name
+   ```
 
-# Ignoring Files
+4. **Commit the change**:
+   ```sh
+   git commit -m "Rename file from old_file_name to new_file_name"
+   ```
 
-## 1. 
+#### Automatic Way
 
-We can ignore certain file by simply adding file to a git File that has been called `.gitignore`
-
-So we are gonna create a `.gitignore` file 
-```sh
-touch .gitignore
-```
-
-What we can do with this is we can add folders like `logs/` to this file certain numbers of like `*.log` 
-
-now if we add new file to a git repository and that is placed in a `.gitignore` file that is not gonna stage or gonna upload in server
-
-we are just gonna do some thing like 
+Alternatively, Git provides an automatic way to rename files:
 
 ```sh
-git add .gitignore 
-git commit -m "Added gitignore"
+git mv old_file_name new_file_name
+git commit -m "Rename file from old_file_name to new_file_name"
 ```
 
-## 2.
+### Ignoring Files in Git
 
-Let us suppose that we have added file to our git like `bin/app.js` now we can do something like add it to our `.gitignore` file , but when we add that file to our `.gitignore` it is been already committed and it is keeping the track of file so now what we can do it to un-stage that file from stage . we can see files like using this command 
-```sh
-git ls-files
-```
+Sometimes, you might want Git to ignore certain files or directories, such as configuration files or logs. This is done using a `.gitignore` file.
 
-now we can see that our file is been tracked so we can remove from there so git does not keep track of that file by simple doing 
-```sh
-git rm --cached bin/app.js
-```
+#### 1. Creating a `.gitignore` File
 
-For a directory we can do it by recursively 
-```sh
-git rm --cached -r bin/
-```
+1. Create the file:
+   ```sh
+   touch .gitignore
+   ```
 
-# Better status
+2. Add patterns to specify files or directories to ignore. For example:
+   - To ignore all `.log` files: `*.log`
+   - To ignore a directory named `logs/`: `logs/`
 
-```sh
-git status -s
-```
+#### 2. Tracking Changes to `.gitignore`
 
-# See the staged activities
+After setting up `.gitignore`, commit it to your repository:
 
 ```sh
-git diff --staged
+git add .gitignore
+git commit -m "Add .gitignore file"
 ```
+
+#### 3. Removing Already Tracked Files from Git
+
+If you already committed a file that you now want Git to ignore, remove it from tracking:
+
+1. **View tracked files**:
+   ```sh
+   git ls-files
+   ```
+
+2. **Untrack a single file**:
+   ```sh
+   git rm --cached path/to/file
+   ```
+
+3. **Untrack an entire directory**:
+   ```sh
+   git rm --cached -r path/to/directory
+   ```
+
+### Handy Git Commands
+
+1. **Compact Git Status**
+   ```sh
+   git status -s
+   ```
+   This shows a short version of the Git status.
+
+2. **View Staged Changes**
+   ```sh
+   git diff --staged
+   ```
+   This command shows differences in files that are staged for commit.
