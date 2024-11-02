@@ -1,0 +1,1 @@
+If i am stuck some where or in a situation i want my self to think how the future me will handle it.

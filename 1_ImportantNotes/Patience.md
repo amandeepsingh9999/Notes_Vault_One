@@ -1,0 +1,1 @@
+Patience build relationships deeper .
