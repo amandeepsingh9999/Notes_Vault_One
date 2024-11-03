@@ -59,5 +59,3 @@ With SSH set up, you’re ready to push your code:
 ```sh
 git push -u origin main
 ```
-
-And that’s it! 🎉 You’re now set up to push your code effortlessly.
