@@ -179,15 +179,17 @@ To undo a commit that deleted a file, you can use `git revert` to create a new c
 git revert HEAD
 ```
 
+or we can check our log see where our files have been deleted
+
+```sh
+git log --oneline
+```
+
+Now we know where our file have been changed i know that my file has been changed in last commit ,
+we can also specify our file name so it only recovers that .
+
+```sh
+git restore --source=HEAD~1 file1.js
+```
+
 This will create a new commit that undoes the last commit (`HEAD`), bringing back `file1.js`. Using `git revert` is beneficial as it preserves the commit history while still reversing changes.
-
----
-
-### Summary
-
-- **Discarding Changes**:
-  - `git restore .` – Discards uncommitted changes in tracked files.
-  - `git clean -fd` – Removes untracked files and directories.
-
-- **Restoring Deleted Files**:
-  - Use `git revert HEAD` to undo a commit that deleted a file, while keeping a record of the reversal in the commit history.
