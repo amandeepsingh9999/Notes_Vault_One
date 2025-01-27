@@ -1,18 +1,25 @@
 Imports :-
+# Imports 
+
+Important imports that we are going to need for creating a compiler
 
 ```cpp
-#include <cctype>           for checking characters 
-#include <iostream>          for input and output 
-#include <stdexcept>        for managing runtime 
-#include <string>               for storing and manipulating strings
+#include <cctype>               // for checking characters 
+#include <iostream>             // for input and output 
+#include <stdexcept>            // for managing runtime 
+#include <string>               // for storing and manipulating strings
 #include <vector>
 
 using namespace std;
 ```
 
+Creating a enum that will help us create own data type
+
 ```cpp
 enum TokenType { NUMBER, PLUS, MINUS, MULTIPLY, DIVIDE, END };
 ```
+
+Struct help us create a array but with different data types
 
 ```cpp
 struct Token {
@@ -20,6 +27,19 @@ struct Token {
   string value;
 };
 ```
+
+In This class we are gonna create Lexer which is a part of compiler that tokenize the code to convert the code into into something like this :- 
+```
+3 = NUMBER
+* = MULTIPLY
+/ = DIVIDE
+```
+
+So for first step in execution in the class we created is we are gonna create two private member of class Lexer which are input and pos , The input have the code it is been provided .
+
+Then we created a constructor which is an explicit flag and in this constructor we are assigning input and pos value to input string and 0 so that it have to start from 0
+
+Then for main step in lexer we created a function getNextToken() it basically do only three things skip he spaces and return END at the end of line and where it provides token to its respective values
 
 ```cpp
 class Lexer {

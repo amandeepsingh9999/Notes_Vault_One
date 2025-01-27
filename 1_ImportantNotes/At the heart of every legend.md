@@ -1,0 +1,1 @@
+We can be heroes in our own lives, every one of us, if we only have the courage to try. Our fates were always intertwined, but now our worlds are joined as one

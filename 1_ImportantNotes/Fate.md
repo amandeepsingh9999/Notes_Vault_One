@@ -1,0 +1,1 @@
+Fate Rarely Calls Upon Us at a Moment of Our Choosing
