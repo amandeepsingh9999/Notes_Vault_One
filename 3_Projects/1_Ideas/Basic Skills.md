@@ -2,4 +2,3 @@
 
 . Experience with Jetson SBCs and their SDK environment? 2. Experience with drones, flight controllers? 3. Experience with robotics?
 
-https://dramafull.net/watch/36398-perfect-match-2025-458467
