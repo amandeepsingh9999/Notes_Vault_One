@@ -1,4 +1,1 @@
- Do you have specialization/formal course on image processing, computer vision and deep learning, if yes share project/blog links? 2. Do you know how to code neural network architectures like CNNs, RNNs, Transformers from scratch, preprocess dataset, train, validate, test and optimize model based on the result, if yes share the project links? 3. Do you have basic knowledge of deep learning model explainability and apply them to understand efficiency of the trained model, if yes showcase your understanding with relevant projects? 4. Can you code in PyTorch, TensorFlow, if yes share end-to-end projects worked on? 5. Do you have basic understanding of object detection, tracking and segmentation algorithms, apply and optimize them in different scenarios, if yes share projects on the same?
-
-. Experience with Jetson SBCs and their SDK environment? 2. Experience with drones, flight controllers? 3. Experience with robotics?
 
