@@ -53,6 +53,12 @@
 
 **Important: Safe Reset Without Losing Profile Data**
 
+Before running git reset --hard, do this to avoid losing your changes:
+
+```bash
+git stash push -m "WIP: my latest changes"
+```
+
 * Even if you run:
 
   ```bash
