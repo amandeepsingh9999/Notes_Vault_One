@@ -56,7 +56,7 @@
 Before running git reset --hard, do this to avoid losing your changes:
 
 ```bash
-git stash push -m "WIP: my latest changes" {File name can also be provided}
+git stash push -m "WIP: my latest changes" {File name that has been added}
 ```
 
 * Even if you run:
