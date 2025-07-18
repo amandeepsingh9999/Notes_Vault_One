@@ -11,7 +11,7 @@
 * Now save your changes safely using stash:
 
   ```bash
-  git stash save "Development Stash"
+  git stash push -m "Development Stash"
   ```
 
 **Step 2: Set Up for Preproduction**
@@ -20,7 +20,7 @@
 * Then save those changes too:
 
   ```bash
-  git stash save "Preproduction Stash"
+  git stash push -m "Preproduction Stash"
   ```
 
 **Step 3: Check All Saved Profiles**
@@ -56,7 +56,7 @@
 Before running git reset --hard, do this to avoid losing your changes:
 
 ```bash
-git stash push -m "WIP: my latest changes"
+git stash push -m "WIP: my latest changes" {File name can also be provided}
 ```
 
 * Even if you run:
